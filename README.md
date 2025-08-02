@@ -11,4 +11,4 @@
 * Please use the .env.local attached on blackboard 
 * npm i
 * npm run dev
-* connect to [localhost ](http://localhost:5173/)
+* connect to http://localhost:5173/
