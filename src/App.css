@@ -1,14 +1,9 @@
 body {
-  font-family:sans-serif;
-  background-color: #FAF9EE; 
-  color: #333; 
+  font-family: sans-serif;
+  background-color: #FAF9EE;
+  color: #333;
   margin: 0;
   padding: 2rem;
-}
-
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
 }
 
 h1 {
@@ -23,6 +18,11 @@ h2 {
   border-bottom: 2px solid #DCCFC0;
   padding-bottom: 0.5rem;
   margin-top: 0;
+  text-align: center;
+}
+
+.main-content {
+  margin-top: 10px;
 }
 
 .dashboard-container {
@@ -38,19 +38,22 @@ h2 {
 
 .game-grid {
   display: grid;
+  /* Creates a responsive grid where columns are at least 250px wide. */
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;
 }
-
+/* game card css */
 .game-card {
-  background-color: #EEEEEE; 
+  background-color: #EEEEEE;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  border: 1px solid #DCCFC0; 
+  border: 1px solid #DCCFC0;
+  cursor: pointer; 
 }
-
+/* on hover css for game card */
 .game-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -66,23 +69,8 @@ h2 {
   font-size: 1.1rem;
   padding: 1rem;
   margin: 0;
-}
-
-
-.stream-info {
-  padding: 1rem;
-}
-
-.stream-info h3 {
-  padding: 0;
-  margin: 0 0 0.5rem 0;
-  color: #A2AF9B;
-}
-
-.stream-info p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #555; 
+  color: #333; 
+  text-align: center;
 }
 
 p {
@@ -95,32 +83,105 @@ p {
   text-align: center;
   padding: 1.5rem;
   margin-top: 2rem;
-  background-color: #A2AF9B; 
-  color: #FAF9EE; 
+  background-color: #A2AF9B;
+  color: #FAF9EE;
   border-top: 1px solid #DCCFC0;
 }
 
 .site-footer p {
   margin: 0;
   font-size: 0.9rem;
-  color: #FAF9EE; 
+  color: #FAF9EE;
 }
 
 .site-header {
   text-align: center;
   padding: 1.5rem;
-  margin-top: 0px;
-  background-color: #A2AF9B; 
-  color: #FAF9EE; 
-  border-top: 1px solid #DCCFC0;
+  margin-bottom: 2rem; 
+  background-color: #A2AF9B;
+  color: #FAF9EE;
+  border-bottom: 1px solid #DCCFC0; 
 }
 
 .site-header p {
   margin: 0;
-  font-size: 0.9rem;
-  color: #FAF9EE; 
+  font-size: 1.5rem; 
+  font-weight: bold;
+  color: #FAF9EE;
 }
 
-.main-content {
-  margin-top: 10px;
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Game Details and Stream Styles */
+.game-details h2 {
+    margin-top: 0;
+}
+
+.game-details img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.game-details p {
+    text-align: left;
+    color: #555;
+}
+
+.game-details a {
+    color: #A2AF9B;
+    text-decoration: none;
+}
+
+.game-details a:hover {
+    text-decoration: underline;
+}
+
+.game-details hr {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  margin: 2rem 0;
+}
+
+.game-details iframe {
+  /*embedded Twitch stream player. */
+  border: none;
+  border-radius: 8px;
+  width: 100%;
 }
