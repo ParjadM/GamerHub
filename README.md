@@ -8,7 +8,7 @@
 
 ## Made By Parjad Minooei
 
-* please use the .env.local attached on blackboard 
+* Please use the .env.local attached on blackboard 
 * npm i
 * npm run dev
 * connect to [localhost ](http://localhost:5173/)
